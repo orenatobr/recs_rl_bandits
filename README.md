@@ -4,6 +4,7 @@ This project implements:
 - Content-based filtering
 - Collaborative filtering
 - Hybrid recommenders
+- Multi-Armed Bandits (epsilon-greedy, UCB, Thompson Sampling)
 
 ## Getting Started
 ```bash
@@ -17,6 +18,7 @@ poetry run python main.py
 
 ## Folder Structure
 - `recommender/`: recommendation algorithms
+- `bandits/`: MAB strategies
 - `utils/`: metrics and tools
 - `main.py`: entry point
 
@@ -26,5 +28,4 @@ poetry run python main.py
 - scikit-learn
 
 ## Coming soon
-- Multi-Armed Bandits
-- Reinforcement Learning
+- Reinforcement Learning agents
