@@ -1,0 +1,12 @@
+[project]
+name = "recs_rl_bandits"
+version = "0.1.0"
+description = "Recommender systems, bandits and RL in Python"
+requires-python = ">=3.11.8"
+authors = [
+  {name = "Renato F Pereira", email = "orenatobr@icloud.com"}
+]
+
+[tool.poetry.dependencies]
+numpy = "*"
+scikit-learn = "*"
