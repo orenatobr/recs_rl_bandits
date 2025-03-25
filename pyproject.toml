@@ -1,12 +1,38 @@
-[project]
+[tool.poetry]
 name = "recs_rl_bandits"
 version = "0.1.0"
 description = "Recommender systems, bandits and RL in Python"
-requires-python = ">=3.11.8"
 authors = [
-  {name = "Renato F Pereira", email = "orenatobr@icloud.com"}
+  "Renato F Pereira <orenatobr@icloud.com>"
+]
+packages = [
+  { include = "bandits" },
+  { include = "ltr" },
+  { include = "recommender" },
+  { include = "rl" },
+  { include = "utils" }
 ]
 
 [tool.poetry.dependencies]
-numpy = "*"
-scikit-learn = "*"
+python = "^3.11.8"
+numpy = "^1.24.0"
+scikit-learn = "^1.3.2"
+torch = "^2.1.0"  # ou ^2.6.0 se estiver disponível para sua plataforma
+
+[tool.poetry.group.dev.dependencies]
+black = "^25.1.0"
+isort = "^6.0.1"
+pytest = "^7.2.0"
+flake8 = "^7.1.2"
+pre-commit = "^4.2.0"
+
+[tool.poetry.scripts]
+start = "main:main"
+
+[tool.isort]
+profile = "black"
+line_length = 120
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
